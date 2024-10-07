@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Spotify Music Player</h1>
+  <button id="spotify-login-button" style="display: none;">Spotify 로그인</button>
+
+  <div id="player-controls" style="display: none;">
+    <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+    <button id="search-button">검색</button>
+
+    <!-- 검색 결과 및 페이지네이션 영역 -->
+    <div id="search-results"></div>
+    <div id="pagination"></div>
+
+    <div id="current-track">
+      <img id="album-image" src="" alt="Album Art" />
+      <div id="track-name"></div>
+      <div id="artist-name"></div>
+    </div>
+
+    <button id="previous-button">이전 곡</button>
+    <button id="play-button">재생/일시정지</button>
+    <button id="next-button">다음 곡</button>
+  </div>
+
+  <!-- 사용자 스크립트 -->
+  <script src="script.js"></script>
+
+  <!-- Spotify SDK 스크립트는 script.js 이후에 로드 -->
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+</body>
+</html>

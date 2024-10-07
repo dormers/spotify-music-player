@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #121212;
+  color: #FFFFFF;
+}
+
+#spotify-login-button,
+#login-button,
+#search-button,
+#player-controls button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #1DB954;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#search-input {
+  width: 300px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#search-results {
+  margin-top: 20px;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.track-item img {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+
+.track-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.track-details div {
+  font-size: 14px;
+}
+
+.track-item button {
+  padding: 5px 10px;
+  background-color: #1DB954;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#current-track {
+  margin-top: 20px;
+}
+
+#album-image {
+  width: 300px;
+  height: 300px;
+}
+
+#track-name,
+#artist-name {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* 로그인 및 회원가입 폼 스타일 */
+form {
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 300px;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #1DB954;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#message {
+  color: red;
+  margin-top: 10px;
+}
