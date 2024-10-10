@@ -119,13 +119,19 @@
 
 2. **SSL 인증서 및 키 생성**
 
+   - [링크](https://slproweb.com/products/Win32OpenSSL.html)에서 Standard 버전 설치(Ligth 버전 제외)
+   - 설치 시 "The OpenSSL binaries (/bin) directory should be in the Windows system directory" 옵션을 선택하여 PATH에 추가
+   - 설치 후에도 ssl 키 생성되지 않을 경우 git bash로 프로젝트 루트 열어서 생성합니다.
+   
    ```bash
-   openssl req -nodes -new -x509 -keyout server.key -out server.crt -days 365
+   openssl genrsa -out server.key 2048
+   openssl req -new -key server.key -out server.csr
+   openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
    ```
 
    - 프롬프트에 따라 정보 입력 (테스트용이므로 임의의 값 입력 가능)
 
-3. **프로젝트 루트로 이동**
+4. **프로젝트 루트로 이동**
 
    ```bash
    cd ..
